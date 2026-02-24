@@ -1,12 +1,7 @@
 :root {
   --bg-1: #fff7ed;
   --bg-2: #ffffff;
-  --accent-1: #f97316;
-  --accent-2: #f59e0b;
   --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --border: #fed7aa;
-  --card: #ffffff;
 }
 
 * {
@@ -25,25 +20,18 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .page {
-  flex: 1;
-  display: grid;
-  place-items: center;
-  padding: 2rem 1rem;
-}
-
-.card {
-  width: min(700px, 100%);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(249, 115, 22, 0.12);
+  gap: 1rem;
+  padding: 2rem 1rem 4rem;
 }
 
 .logo {
@@ -51,53 +39,21 @@ body {
   max-width: 280px;
   width: 100%;
   height: auto;
-  margin: 0 auto 1.25rem;
-}
-
-.badge {
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid #fdba74;
-  background: #fff7ed;
-  color: #c2410c;
-  font-size: 0.9rem;
-  font-weight: 600;
+  margin: 0;
 }
 
 h1 {
-  margin: 0 0 0.9rem;
+  margin: 0;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1.15;
 }
 
-p {
-  margin: 0 auto 0.8rem;
-  max-width: 56ch;
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-.subtle {
-  margin-top: 0.35rem;
-  font-size: 0.98rem;
-}
-
 .footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 1rem;
   text-align: center;
   color: #64748b;
-}
-
-@media (max-width: 640px) {
-  .card {
-    padding: 1.4rem;
-    border-radius: 16px;
-  }
-
-  p {
-    font-size: 1rem;
-  }
 }
